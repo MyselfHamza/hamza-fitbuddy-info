@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Actual MM Nutrition ChatGPT reviewer test walkthrough using a dedicated synthetic account.">
+  <title>ChatGPT review walkthrough — MM Nutrition</title>
+  <link rel="stylesheet" href="site.css">
+  <style>video{display:block;width:100%;height:auto;background:#101612;border-radius:10px}.playback,.chapters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.playback button,.chapters button{font:inherit;min-height:44px;border:1px solid #a8b5a5;border-radius:6px;background:#fffefb;color:#167234;padding:8px 14px;cursor:pointer}button:focus-visible{outline:3px solid #242a2e;outline-offset:3px}.video-note{padding:16px;background:#edf2e9;border-radius:8px}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;padding:12px 8px;border-bottom:1px solid #dfe6db}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="index.html">MM Nutrition</a><div class="navlinks"><a href="chatgpt.html">ChatGPT connection</a><a href="chatgpt-support.html">Support</a><a href="privacy.html">Privacy</a></div></nav></header>
+<main id="main" class="wrap"><article class="article">
+  <h1>ChatGPT review walkthrough</h1>
+  <p class="date">Recorded 7–8 November 2026 · Synthetic reviewer account</p>
+  <p>This video shows the actual results of five positive workflows and three refusal cases in ChatGPT. It uses a separate synthetic MM Nutrition account and the public MCP gateway.</p>
+  <video id="demo" controls preload="metadata" playsinline aria-label="MM Nutrition ChatGPT reviewer walkthrough">
+    <source src="review/mm-nutrition-chatgpt-demo-2026-11-08.mp4" type="video/mp4">
+    <a href="review/mm-nutrition-chatgpt-demo-2026-11-08.mp4">Open the MP4 recording</a>.
+  </video>
+  <div class="playback" aria-label="Playback speed"><button data-rate="1">Play at 1×</button><button data-rate="2">Play at 2×</button><button data-rate="4">Play at 4×</button><button id="pause">Pause</button></div>
+  <p id="playback-status" role="status">Choose a playback speed or use the video controls.</p>
+  <div class="video-note"><strong>Recording limits.</strong> This is an edited screen recording of completed ChatGPT results, rather than a continuous live prompt-and-response session. Sign-in and the human website approval clicks are off-camera. The video shows the previews, saved receipts and diary readbacks. It contains no account login details. Routine-save opt-in is outside this submission workflow. The browser custom MCP test connection uses the same public endpoint and client; it does not include the packaged public skill.</div>
+  <h2>Chapters</h2>
+  <div class="chapters"><button data-seek="12">October diary</button><button data-seek="54">Nutrients and dated goals</button><button data-seek="94">Weight, recipe and portion</button><button data-seek="144">Saved goal changes</button><button data-seek="164">Meal preview</button><button data-seek="174">Refusal cases</button><button data-seek="204">Meal save and portion edit</button><button data-seek="242">Edit receipt and deletion</button><button data-seek="302">Final diary verification</button></div>
+  <h2>Observed results</h2>
+  <table><thead><tr><th>Test</th><th>Result</th></tr></thead><tbody>
+    <tr><td>31-day diary</td><td>33 October meals across 31 dates; pagination completed.</td></tr>
+    <tr><td>Nutrients and historical goals</td><td>31 October: 1,140 kcal, 39 g protein, 201 g carbs and 21 g fat. Zero vitamin D, unknown iodine/fibre and partial calcium remained distinct.</td></tr>
+    <tr><td>Profile, library and exact meal</td><td>71 kg measured on 15 October was distinguished from the 72 kg profile value. The saved recipe and exact 100 g meal portion were returned.</td></tr>
+    <tr><td>Dated goal changes</td><td>Human-approved targets read back as 2,400 kcal, 120 g protein, 300 g carbs, 80 g fat and fibre minimum 25 g from 4 November. Initial simultaneous preparation required an explicit sequential retry.</td></tr>
+    <tr><td>Meal lifecycle</td><td>Only the newly created Review oats test meal was saved, edited to 50 g, then deleted after website confirmation. Exact proportional nutrients were preserved. The original 33 October meals remained.</td></tr>
+    <tr><td>Three refusals</td><td>No friend’s diary by email, no prescribing or automatic insulin adjustment, and no API-key/security/bulk-account controls. No prohibited tool activity was displayed.</td></tr>
+  </tbody></table>
+  <p>Only the synthetic reviewer account was used. The final 4 November diary is empty because the temporary test meal was deleted; that does not establish zero food intake.</p>
+  <p><a href="review/mm-nutrition-chatgpt-demo-2026-11-08.mp4">Open or download the 1080p MP4</a> · <a href="chatgpt.html">Connection information</a></p>
+</article></main>
+<footer><div class="wrap"><p>MM Nutrition · Maintained by Hamza Imdad</p></div></footer>
+<script>
+  const video = document.getElementById('demo');
+  const status = document.getElementById('playback-status');
+  document.querySelectorAll('[data-rate]').forEach(button => button.addEventListener('click', async () => {
+    video.playbackRate = Number(button.dataset.rate);
+    try { await video.play(); status.textContent = 'Playing at ' + video.playbackRate + '×.'; }
+    catch { status.textContent = 'Use the video’s play control to start playback.'; }
+  }));
+  document.querySelectorAll('[data-seek]').forEach(button => button.addEventListener('click', () => {
+    video.currentTime = Number(button.dataset.seek);
+    status.textContent = 'Selected chapter: ' + button.textContent + '.';
+  }));
+  document.getElementById('pause').addEventListener('click', () => { video.pause(); status.textContent = 'Paused.'; });
+  video.addEventListener('ended', () => { status.textContent = 'Playback complete.'; });
+</script>
+</body></html>
