@@ -24,6 +24,8 @@ MM Nutrition is maintained by Hamza Imdad. It is based on the open-source FitBud
 
 - Install: https://chatgpt.com/plugins/plugin_asdk_app_6aefa17f2a648191bf8be87e846674ff
 - MCP endpoint: https://mm-nutrition-chatgpt-gateway.vercel.app/mcp (OAuth 2.1 with PKCE, Streamable HTTP)
+- Documentation: https://github.com/MyselfHamza/mm-nutrition-mcp
+- Official MCP Registry: io.github.MyselfHamza/mm-nutrition
 - 11 tools: get_connection, list_meals, get_daily_totals, get_nutrition_profile, get_meal, get_nutrient_catalog, lookup_foods, list_saved_foods, log_meal, prepare_change, apply_change.
 - Connections start read-only. Nutrition management is an optional permission you turn on at MM's website.
 - New changes are shown in chat first and approved on MM's website. Deleting a meal or saved food always needs three confirmations.
