@@ -1,0 +1,43 @@
+# MM Nutrition
+
+> MM Nutrition is a free nutrition tracker and food diary. You can use it on Android, on the web, and inside ChatGPT. It tracks calories, protein, carbs and fat, plus up to 54 nutrients: vitamins, minerals, fibre, sugars, fats and omega-3s, choline and essential amino acids. It has no purchases and no subscription. One account syncs across every way you use it.
+
+MM Nutrition is maintained by Hamza Imdad. It is based on the open-source FitBuddy project.
+
+## Ways to use it
+
+- Android app: log by photo, voice, typed description, barcode scan, nutrition-label scan, food search or by repeating a previous meal. It also covers recipes, weight, workouts, nutrient goals and history charts.
+- Website (https://micronutrition.framer.website): sign up, log and edit meals, view dashboards and goals. It uses the same account as the app.
+- ChatGPT app (MCP server): tell ChatGPT what you ate, in plain words. ChatGPT estimates the full nutrient panel, shows a short summary and logs it to your MM diary. You can also ask about your intake, compare days with your goals, and change meals, recipes, weight or goals.
+
+## Features
+
+- Calories, macros and up to 54 tracked nutrients per food and meal.
+- A built-in UK food-composition catalogue (CoFID 2021, 2,636 foods).
+- Daily targets, minimums and limits for each micronutrient, with target lines on charts.
+- Nutrient history, food contributors, weekly review and an hourly diary timeline.
+- Saved foods, recipes and previous meals with adjustable portions.
+- Missing nutrient data is shown as unknown, never as zero. Partial totals are labelled.
+- Private account per person. Changes save to your account as you make them.
+
+## ChatGPT connection (MCP)
+
+- Install: https://chatgpt.com/plugins/plugin_asdk_app_6aefa17f2a648191bf8be87e846674ff
+- MCP endpoint: https://mm-nutrition-chatgpt-gateway.vercel.app/mcp (OAuth 2.1 with PKCE, Streamable HTTP)
+- 11 tools: get_connection, list_meals, get_daily_totals, get_nutrition_profile, get_meal, get_nutrient_catalog, lookup_foods, list_saved_foods, log_meal, prepare_change, apply_change.
+- Connections start read-only. Nutrition management is an optional permission you turn on at MM's website.
+- New changes are shown in chat first and approved on MM's website. Deleting a meal or saved food always needs three confirmations.
+- No OpenAI API key is needed. No background monitoring. No medical diagnosis or medication advice.
+
+## Cost
+
+Free. No purchases or subscription. The app's own AI photo, voice and text estimates use an AI provider you connect yourself. Free options exist, for example Google Gemini's free tier. The ChatGPT connection needs no API key.
+
+## Links
+
+- [ChatGPT connection guide](https://myselfhamza.github.io/hamza-fitbuddy-info/chatgpt.html)
+- [App website and Android download](https://micronutrition.framer.website)
+- [Support](https://myselfhamza.github.io/hamza-fitbuddy-info/chatgpt-support.html)
+- [Privacy policy](https://myselfhamza.github.io/hamza-fitbuddy-info/privacy.html)
+- [Terms of use](https://myselfhamza.github.io/hamza-fitbuddy-info/terms.html)
+- Contact: pitchppt@gmail.com
